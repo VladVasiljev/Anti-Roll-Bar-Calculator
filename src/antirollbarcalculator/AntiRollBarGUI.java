@@ -27,50 +27,89 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        weight = new javax.swing.JLabel();
-        calculate = new javax.swing.JButton();
+        weightLab = new javax.swing.JLabel();
+        Front = new javax.swing.JButton();
         exit = new javax.swing.JButton();
         TitleOfProgram = new javax.swing.JLabel();
         stiffest = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        softest = new javax.swing.JLabel();
+        softest = new javax.swing.JTextField();
+        weightOfCar = new javax.swing.JTextField();
+        stiffestLab = new javax.swing.JLabel();
+        softestLab = new javax.swing.JLabel();
         Title = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Rear = new javax.swing.JButton();
+        frontLabel = new javax.swing.JLabel();
+        rearLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(java.awt.Color.black);
 
-        weight.setText("Weight %");
+        weightLab.setText("Weight %");
 
-        calculate.setText("Calculate Front ");
-        calculate.addActionListener(new java.awt.event.ActionListener() {
+        Front.setText("Calculate Front ");
+        Front.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculateActionPerformed(evt);
+                FrontActionPerformed(evt);
             }
         });
 
         exit.setText("Exit");
-
-        TitleOfProgram.setText("Anti Roll Bar Calculator ");
-
-        jTextField2.setText("jTextField2");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                exitActionPerformed(evt);
             }
         });
 
-        jTextField3.setText("jTextField3");
+        TitleOfProgram.setText("Anti Roll Bar Calculator ");
 
-        jLabel2.setText("Stiffest");
+        stiffest.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                stiffestFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                stiffestFocusLost(evt);
+            }
+        });
 
-        softest.setText("Softest");
+        softest.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                softestFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                softestFocusLost(evt);
+            }
+        });
+        softest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                softestActionPerformed(evt);
+            }
+        });
+
+        weightOfCar.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                weightOfCarFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                weightOfCarFocusLost(evt);
+            }
+        });
+
+        stiffestLab.setText("Stiffest");
+
+        softestLab.setText("Softest");
 
         Title.setText("Forza Horzion 3");
 
-        jButton1.setText("Calculate Rear");
+        Rear.setText("Calculate Rear");
+        Rear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RearActionPerformed(evt);
+            }
+        });
+
+        frontLabel.setText("Front");
+
+        rearLabel.setText("Rear");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,72 +118,153 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(24, 24, 24)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(softest)
-                                    .addComponent(jLabel2)
-                                    .addComponent(weight))
-                                .addGap(9, 9, 9)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(stiffest)
-                                    .addComponent(jTextField2)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(TitleOfProgram)
-                                .addGap(33, 33, 33)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(calculate, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(Title)
-                                .addGap(38, 38, 38))))
+                                .addComponent(stiffestLab)
+                                .addGap(3, 3, 3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(weightLab)
+                                .addGap(6, 6, 6))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(362, Short.MAX_VALUE)
-                        .addComponent(exit)))
-                .addContainerGap())
+                        .addContainerGap()
+                        .addComponent(softestLab)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(stiffest, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                        .addComponent(softest)
+                        .addComponent(weightOfCar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(TitleOfProgram))
+                    .addComponent(rearLabel)
+                    .addComponent(frontLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Front, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Rear, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(20, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(exit)
+                        .addGap(22, 22, 22))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Title)
+                .addGap(60, 60, 60))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TitleOfProgram)
-                    .addComponent(Title))
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(stiffest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(calculate))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(softest))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(weight)
-                    .addComponent(jButton1))
-                .addGap(18, 18, 18)
-                .addComponent(exit)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(TitleOfProgram)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(frontLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rearLabel))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Title)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(stiffest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(stiffestLab)
+                            .addComponent(Front))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(softest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(softestLab))
+                        .addGap(16, 16, 16)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(weightOfCar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(weightLab)
+                            .addComponent(Rear))
+                        .addGap(18, 18, 18)
+                        .addComponent(exit)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void calculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateActionPerformed
-        String stiffestval;
-        stiffestval = stiffest.getText();
-        System.out.println(stiffestval);
-    }//GEN-LAST:event_calculateActionPerformed
+    private void FrontActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FrontActionPerformed
+        double stiffness;
+        double softness;
+        double weight;
+        stiffness = Double.parseDouble(stiffest.getText());
+        softness = Double.parseDouble(softest.getText());
+        weight = Double.parseDouble(weightOfCar.getText());
+        double convertedWeight = weight / 100;
+        double total = (((stiffness - softness) * convertedWeight) + softness);
+        String finalTotal = String.valueOf(total);
+        frontLabel.setText(finalTotal);
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+
+    }//GEN-LAST:event_FrontActionPerformed
+
+    private void softestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_softestActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_softestActionPerformed
+
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_exitActionPerformed
+
+    private void RearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RearActionPerformed
+        double stiffness;
+        double softness;
+        double weight;
+        stiffness = Double.parseDouble(stiffest.getText());
+        softness = Double.parseDouble(softest.getText());
+        weight = Double.parseDouble(weightOfCar.getText());
+        double rearWeight = 100 - weight;
+        double convertedWeight = rearWeight / 100;
+        double total = (((stiffness - softness) * convertedWeight) + softness);
+        String finalTotal = String.valueOf(total);
+        rearLabel.setText(finalTotal);
+
+    }//GEN-LAST:event_RearActionPerformed
+
+    private void stiffestFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_stiffestFocusGained
+        if (stiffest.getText().equals("65 if Race Anti-Roll Bars Installed")) {
+            stiffest.setText("");
+        }
+    }//GEN-LAST:event_stiffestFocusGained
+
+    private void stiffestFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_stiffestFocusLost
+        if (stiffest.getText().equals("")) {
+            stiffest.setText("65 If Race Anti-Roll Bars Installed");
+        }
+
+    }//GEN-LAST:event_stiffestFocusLost
+
+    private void softestFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_softestFocusGained
+        if (softest.getText().equals("1 If Race Anti-Roll Bars Installed")) {
+            softest.setText("");
+        }
+    }//GEN-LAST:event_softestFocusGained
+
+    private void softestFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_softestFocusLost
+        if (softest.getText().equals("")) {
+            softest.setText("1 If Race Anti-Roll Bars Installed");
+        }
+    }//GEN-LAST:event_softestFocusLost
+
+    private void weightOfCarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_weightOfCarFocusGained
+        if (weightOfCar.getText().equals("Check the weight in % in-game")) {
+            weightOfCar.setText("");
+        }
+    }//GEN-LAST:event_weightOfCarFocusGained
+
+    private void weightOfCarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_weightOfCarFocusLost
+        if (weightOfCar.getText().equals("")) {
+            weightOfCar.setText("Check the weight in % in-game");
+        }
+    }//GEN-LAST:event_weightOfCarFocusLost
 
     /**
      * @param args the command line arguments
@@ -182,16 +302,18 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Front;
+    private javax.swing.JButton Rear;
     private javax.swing.JLabel Title;
     private javax.swing.JLabel TitleOfProgram;
-    private javax.swing.JButton calculate;
     private javax.swing.JButton exit;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JLabel softest;
+    private javax.swing.JLabel frontLabel;
+    private javax.swing.JLabel rearLabel;
+    private javax.swing.JTextField softest;
+    private javax.swing.JLabel softestLab;
     private javax.swing.JTextField stiffest;
-    private javax.swing.JLabel weight;
+    private javax.swing.JLabel stiffestLab;
+    private javax.swing.JLabel weightLab;
+    private javax.swing.JTextField weightOfCar;
     // End of variables declaration//GEN-END:variables
 }
