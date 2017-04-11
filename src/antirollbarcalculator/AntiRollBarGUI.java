@@ -5,6 +5,8 @@
  */
 package antirollbarcalculator;
 
+import java.awt.Toolkit;
+
 /**
  *
  * @author VladVasiljev
@@ -16,6 +18,8 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
      */
     public AntiRollBarGUI() {
         initComponents();
+        this.setLocation(300, 100);
+        setIcon();
     }
 
     /**
@@ -62,6 +66,7 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
 
         TitleOfProgram.setText("Anti Roll Bar Calculator ");
 
+        stiffest.setText("65");
         stiffest.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 stiffestFocusGained(evt);
@@ -71,6 +76,7 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
             }
         });
 
+        softest.setText("1");
         softest.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 softestFocusGained(evt);
@@ -230,28 +236,28 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_RearActionPerformed
 
     private void stiffestFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_stiffestFocusGained
-        if (stiffest.getText().equals("65 if Race Anti-Roll Bars Installed")) {
-            stiffest.setText("");
-        }
+//        if (stiffest.getText().equals("65 if Race Anti-Roll Bars Installed")) {
+//            stiffest.setText("");
+//        }
     }//GEN-LAST:event_stiffestFocusGained
 
     private void stiffestFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_stiffestFocusLost
-        if (stiffest.getText().equals("")) {
-            stiffest.setText("65 If Race Anti-Roll Bars Installed");
-        }
+//        if (stiffest.getText().equals("")) {
+//            stiffest.setText("65 If Race Anti-Roll Bars Installed");
+//        }
 
     }//GEN-LAST:event_stiffestFocusLost
 
     private void softestFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_softestFocusGained
-        if (softest.getText().equals("1 If Race Anti-Roll Bars Installed")) {
-            softest.setText("");
-        }
+//        if (softest.getText().equals("1 If Race Anti-Roll Bars Installed")) {
+//            softest.setText("");
+//        }
     }//GEN-LAST:event_softestFocusGained
 
     private void softestFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_softestFocusLost
-        if (softest.getText().equals("")) {
-            softest.setText("1 If Race Anti-Roll Bars Installed");
-        }
+//        if (softest.getText().equals("")) {
+//            softest.setText("1 If Race Anti-Roll Bars Installed");
+//        }
     }//GEN-LAST:event_softestFocusLost
 
     private void weightOfCarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_weightOfCarFocusGained
@@ -316,4 +322,8 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
     private javax.swing.JLabel weightLab;
     private javax.swing.JTextField weightOfCar;
     // End of variables declaration//GEN-END:variables
+
+    private void setIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.jpeg")));
+    }
 }
