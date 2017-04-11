@@ -18,6 +18,7 @@ public class AntiRollBarMain {
         AntiRollBarGUI antiRollBarGUI = new AntiRollBarGUI();
         antiRollBarGUI.setVisible(true);
         antiRollBarGUI.setTitle("Anti Roll Bar Calculator");
+        
     }
     
 }
