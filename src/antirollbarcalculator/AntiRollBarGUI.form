@@ -28,7 +28,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
@@ -41,9 +41,20 @@
                           </Group>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="softestLab" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="RearValue" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="softestLab" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="FrontValue" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -57,8 +68,8 @@
                       <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                       <Component id="TitleOfProgram" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="rearLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="frontLabel" min="-2" max="-2" attributes="0"/>
+                  <Component id="frontLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="rearLabel" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -91,9 +102,15 @@
                   <Group type="102" attributes="0">
                       <Component id="TitleOfProgram" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="frontLabel" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="frontLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="FrontValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="rearLabel" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="rearLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="RearValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="Title" min="-2" max="-2" attributes="0"/>
@@ -206,6 +223,17 @@
     <Component class="javax.swing.JLabel" name="rearLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Rear"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="FrontValue">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Front Value :"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="RearValue">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Rear Value :"/>
       </Properties>
     </Component>
   </SubComponents>

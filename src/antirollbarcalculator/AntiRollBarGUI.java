@@ -44,6 +44,8 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
         Rear = new javax.swing.JButton();
         frontLabel = new javax.swing.JLabel();
         rearLabel = new javax.swing.JLabel();
+        FrontValue = new javax.swing.JLabel();
+        RearValue = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(java.awt.Color.black);
@@ -117,6 +119,11 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
 
         rearLabel.setText("Rear");
 
+        FrontValue.setText("Front Value :");
+        FrontValue.setToolTipText("");
+
+        RearValue.setText("Rear Value :");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -132,9 +139,16 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(weightLab)
                                 .addGap(6, 6, 6))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(softestLab)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(RearValue)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(37, 37, 37)
+                                    .addComponent(softestLab))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(FrontValue))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -144,8 +158,8 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(58, 58, 58)
                         .addComponent(TitleOfProgram))
-                    .addComponent(rearLabel)
-                    .addComponent(frontLabel))
+                    .addComponent(frontLabel)
+                    .addComponent(rearLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -170,9 +184,13 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(TitleOfProgram)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(frontLabel)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(frontLabel)
+                            .addComponent(FrontValue))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rearLabel))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rearLabel)
+                            .addComponent(RearValue)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Title)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -309,7 +327,9 @@ public class AntiRollBarGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Front;
+    private javax.swing.JLabel FrontValue;
     private javax.swing.JButton Rear;
+    private javax.swing.JLabel RearValue;
     private javax.swing.JLabel Title;
     private javax.swing.JLabel TitleOfProgram;
     private javax.swing.JButton exit;
